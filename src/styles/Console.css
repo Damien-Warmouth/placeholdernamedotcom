@@ -1,0 +1,37 @@
+
+/* ADD AT AFTER I GET CARET EMULATED IN JAVASCRIPT */
+/* ------------------------------------------------ */
+ input{
+    /* border: 0; */
+    /* border-color: transparent;
+    border-style: none; */
+    background: #121212;
+    color: white;
+    border-color: white;
+    -webkit-appearance: none;
+}
+
+textarea{           
+    /* border: 0;
+    border-color: transparent;
+    border-style: none; */
+    color: white;
+    border-color: white;
+    -webkit-appearance: none;
+    
+    
+}
+
+
+/* 
+textarea:focus, input:focus{
+    border-color: transparent;
+    -webkit-appearance: none;
+    outline: none;
+}
+
+*:focus {
+    outline: none;
+} */
+
+/* ------------------------------------------------ */
