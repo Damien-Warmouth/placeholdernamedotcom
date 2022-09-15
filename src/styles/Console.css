@@ -1,37 +1,60 @@
 
 /* ADD AT AFTER I GET CARET EMULATED IN JAVASCRIPT */
 /* ------------------------------------------------ */
- input{
-    /* border: 0; */
-    /* border-color: transparent;
-    border-style: none; */
+textarea{
+    display: inline;
+    width: auto;
+    overflow: hidden;
+    resize: none;
+    height: 24px;
+}
+ #setter{
+    border: 0; 
+    border-color: transparent;
+    border-style: none;
     background: #121212;
     color: white;
     border-color: white;
     -webkit-appearance: none;
+
 }
 
-textarea{           
-    /* border: 0;
+#setter{           
+    border: 0;
     border-color: transparent;
-    border-style: none; */
+    border-style: none;
     color: white;
     border-color: white;
     -webkit-appearance: none;
-    
-    
 }
 
+#user{
+    display: flex;
+}
 
-/* 
 textarea:focus, input:focus{
     border-color: transparent;
     -webkit-appearance: none;
     outline: none;
+    
 }
 
 *:focus {
     outline: none;
-} */
+}
+
+.cursor {
+    font-size: 12px;
+    background-color: red;
+    color: red;
+    position: relative;
+    opacity: 0.5;
+}
+
+
+#writer {
+    font-family: cursor, courier;
+    font-weight: bold;
+}
 
 /* ------------------------------------------------ */

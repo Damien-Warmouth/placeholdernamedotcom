@@ -1,5 +1,7 @@
 import React from 'react';
 import ScriptTag from 'react-script-tag';
+import $ from "jquery"
+
 
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -12,7 +14,21 @@ const darkTheme = createTheme({
   },
 });
 
+
+
 const Console = () => {
+  const newScript = () =>{
+    return{
+      componentDidMount() {
+        const script = document.createElement('script');
+        let url = '../scripts/termCursorEmulator.js'
+        script.src = url;   //(This is external js url)
+        script.async = true;
+        document.body.appendChild(script);
+      }
+    
+    }
+  }
   return (
     <div >
       <meta name="viewport" content="initial-scale=1, width=device-width" />
@@ -29,17 +45,22 @@ const Console = () => {
 
         <div>
           <body>
-            <p class="font-['Consolas']">C:\Users\You{'>'}
-            <input class="ml-1" id='textField' type='text' autoComplete='off'/> {/* input & textarea */}
-            </p>
-          <ScriptTag isHydrating={true} type="text/javascript" src="../scripts/focusInputScript.js" /> 
+            <div id="terminal" onclick="$('setter').focus();">
+              <p id="user" class="font-['Consolas']">C:\Users\You{'>'}
+                  <div id="getter">
+                  <newScript/>
+                    <span id="writer"></span><b class="cursor" id="cursor">B</b>
+                  </div>
+                  <textarea type="text" id="setter" onkeydown="writeit(this, event);moveIt(this.value.length, event)" onkeyup="writeit(this, event)" onkeypress="writeit(this, event);" autoComplete='off'></textarea>
+              </p>
+            </div>
           </body>
         </div>
 
         </ThemeProvider>
     </div>
+
   )
-  
 }
 
 export default Console
